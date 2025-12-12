@@ -1,0 +1,165 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background-color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-rows: auto 1fr auto;
+}
+
+html
+{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+/* Sección de registro */
+.registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 200px); 
+    margin-top: 50px;
+}
+
+/* Encabezado fuera del contenedor */
+.encabezadoContainer h1
+{
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: var(--tertiary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Contenedor del formulario */
+.registroContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+
+    background: #FDE9E9; 
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255, 196, 196, 0.4);
+
+    transition:
+        box-shadow 0.5s ease-in-out,
+        transform 0.3s ease;
+}
+
+.registroContainer:hover
+{
+    box-shadow: 0 15px 35px rgba(255, 196, 196, 0.6);
+    transform: scale(1.02) translateY(-2px);
+}
+
+.formsContainer {
+    width: 100%;
+}
+
+.formsContainer form {
+    width: 100%;
+}
+
+.inputGroup
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label
+{
+    margin-bottom: 0.5rem;
+    color: var(--quaternary-color);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.inputGroup input
+{
+    padding: 0.75rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    color: var(--quaternary-color);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.inputGroup input::placeholder
+{
+    color: rgba(133, 14, 53, 0.6);
+}
+
+.inputGroup input:focus
+{
+    outline: none;
+    border-color: var(--tertiary-color);
+}
+
+.inputGroup input:focus::placeholder
+{
+    color: rgba(133, 14, 53, 0.4);
+}
+
+.inputGroup button
+{
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.inputGroup button:hover
+{
+    background-color: var(--quaternary-color);
+    transform: translateY(-2px);
+}
+
+.inputGroup button:active
+{
+    transform: translateY(0);
+}
+
+.registroGroup
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.registroGroup p
+{
+    color: var(--quaternary-color);
+    font-size: 0.9rem;
+}
+
+.registroGroup a
+{
+    color: var(--tertiary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.registroGroup a:hover
+{
+    color: var(--quaternary-color);
+    text-decoration: underline;
+}

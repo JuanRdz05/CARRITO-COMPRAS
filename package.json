@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.15.3"
+  },
+  "name": "carrito-compras",
+  "version": "1.0.0",
+  "main": "DATABASE/app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Juan Rodríguez Lara",
+  "license": "ISC",
+  "description": "Proyecto de carrito de compras"
+}
