@@ -1,2 +1,4 @@
 node_modules
-.ENV
+/DATABASE/SRC/.ENV
+package-lock.json
+package.json
