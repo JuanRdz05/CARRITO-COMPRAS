@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import mainRoutes from './DATABASE/SRC/ROUTES/main.js';
+import mainRoutes from './SRC/ROUTES/main.js';
 
 // Setup para __dirname en ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -27,17 +27,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // IMPORTANTE: Los archivos estáticos deben ir ANTES de las rutas
 
-// 1. Servir CSS
-app.use('../CSS', express.static(path.join(__dirname, 'CSS'), {
-    setHeaders: (res, filepath) => {
-        if (filepath.endsWith('.css')) {
-            res.setHeader('Content-Type', 'text/css');
-        }
-    }
-}));
-
-// 2. Servir DATABASE
-app.use('/DATABASE', express.static(path.join(__dirname, 'DATABASE')));
+app.use('/CSS', express.static(path.join(__dirname, '../public/CSS')));
+app.use('/JS', express.static(path.join(__dirname, '../public/JS')));
+app.use('/IMG', express.static(path.join(__dirname, '../public/IMG')));
+app.use(express.static(path.join(__dirname, '../public/HTML')));
 
 // 3. Servir archivos de la raíz (como imágenes)
 app.use(express.static(__dirname, {
