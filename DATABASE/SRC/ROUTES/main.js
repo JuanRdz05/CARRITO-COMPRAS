@@ -9,28 +9,39 @@ const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+console.log('📁 main.js __dirname:', __dirname);
+
 // ==========================================
 // RUTAS PARA SERVIR PÁGINAS HTML
 // ==========================================
 
 // Ruta principal - Página de inicio
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../../HTML/index.html'));
+    const filePath = path.join(__dirname, '../../../HTML/index.html');
+    console.log('📄 Sirviendo index.html desde:', filePath);
+    res.sendFile(filePath);
 });
 
 // Ruta de login
 router.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../../HTML/login.html'));
+    const filePath = path.join(__dirname, '../../../HTML/login.html');
+    console.log('📄 Sirviendo login.html desde:', filePath);
+    res.sendFile(filePath);
 });
 
 // Ruta de registro
 router.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../../HTML/registro.html'));
+    const filePath = path.join(__dirname, '../../../HTML/registro.html');
+    console.log('📄 Sirviendo registro.html desde:', filePath);
+    res.sendFile(filePath);
 });
 
 // Ruta de productos
 router.get('/productos', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../../HTML/productos.html'));
+    const filePath = path.join(__dirname, '../../HTML/productos.html');
+    console.log('📄 Sirviendo productos.html desde:', filePath);
+    res.sendFile(filePath);
 });
+
 
 export default router;
